@@ -5,8 +5,8 @@ Receive lightning payments for each tool request, powered by [NWC](https://nwc.d
 In a few lines of code, turn your [modelcontextprotocol/sdk](https://github.com/modelcontextprotocol/typescript-sdk) MCP Server tool into a paid tool:
 
 ```diff
-- const server = new McpServer(...);
-+ const server = new PaidMcpServer({nwcUrl}, ...);
+- const server = new McpServer({name: "your-mcp-server"});
++ const server = new PaidMcpServer({name: "your mcp server"}, {nwcUrl});
 - server.registerTool(name, config, callback);
 + server.registerPaidTool(name, config, charge, callback);
 ```
@@ -37,13 +37,17 @@ import { PaidMcpServer } from "@getalby/lmcp";
 // Configure your NWC URL - should be "nostr+walletconnect://..."
 const nwcUrl = process.env.NWC_URL;
 // use PaidMcpServer instead of McpServer
-const server = new PaidMcpServer({nwcUrl}, ...);
+const server = new PaidMcpServer({ name: "your-mcp-server" }, { nwcUrl });
 
 // for paid tools, use registerPaidTool
 // it requires an additional argument before the callback
 // to configure charging information based on the request
-server.registerPaidTool(name, config, (args) =>
-  ({satoshi: 1, description: "Paid tool usage: " + args.city}), callback);
+server.registerPaidTool(
+  name,
+  config,
+  (args) => ({ satoshi: 1, description: "Paid tool usage: " + args.city }),
+  callback
+);
 ```
 
 ## Examples
