@@ -1,0 +1,44 @@
+{
+  "name": "@getalby/weather-mcp",
+  "description": "MCP server for controlling a Lightning wallet using Nostr Wallet Connect",
+  "repository": "https://github.com/getAlby/mcp.git",
+  "version": "1.1.0",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "mcp": "build/index.js"
+  },
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "start:http": "MODE=HTTP node build/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node build/index.js"
+  },
+  "keywords": [
+    "lightning",
+    "nostr",
+    "nwc",
+    "wallet",
+    "mcp",
+    "model-context-protocol",
+    "ai"
+  ],
+  "author": "Alby contributors",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@getalby/lmcp": "portal:../../",
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "@types/node": "^20.11.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2"
+  },
+  "packageManager": "yarn@4.9.0"
+}

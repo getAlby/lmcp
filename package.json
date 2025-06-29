@@ -1,0 +1,37 @@
+{
+  "name": "@getalby/lmcp",
+  "description": "Charge for your MCP Server tools using Nostr Wallet Connect",
+  "repository": "https://github.com/getAlby/lmcp.git",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/index.js",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "tsc"
+  },
+  "keywords": [
+    "lightning",
+    "nostr",
+    "nwc",
+    "wallet",
+    "mcp",
+    "model-context-protocol",
+    "ai"
+  ],
+  "author": "Alby contributors",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@getalby/sdk": "^5.1.0",
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "express": "^5.1.0",
+    "websocket-polyfill": "0.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.5",
+    "@types/express": "^5.0.2"
+  }
+}
