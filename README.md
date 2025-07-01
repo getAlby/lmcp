@@ -29,7 +29,7 @@ yarn add @getalby/lmcp
 
 `PaidMcpServer` is a thin wrapper around the standard `McpServer` class that adds ability to create paid tools.
 
-NWC connects your MCP Server to your lightning wallet, to be able to charge payments. [Learn more about NWC](https://nwc.dev). If you don't have a NWC-enabled lightning wallet yet, try [https://getalby.com](Alby)
+> This MCP requires an NWC-enabled lightning wallet to be able to charge payments. [NWC](https://nwc.dev) is an open protocol for connecting apps to lightning wallets. If you don't have a NWC-enabled lightning wallet yet, try [Alby Hub](https://albyhub.com).
 
 ```js
 import { PaidMcpServer } from "@getalby/lmcp";
