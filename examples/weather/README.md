@@ -37,7 +37,7 @@ yarn build
 
 ### Add your NWC connection
 
-Copy `.env.example` to `.env` and update your lightning address
+Copy `.env.example` to `.env` and update your NWC connection secret
 
 ### Inspect the tools (use/test without an LLM)
 
