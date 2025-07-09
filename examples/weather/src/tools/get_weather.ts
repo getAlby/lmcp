@@ -17,7 +17,7 @@ export function registerGetWeatherTool(server: PaidMcpServer) {
           .describe("The temperature in degrees celcius"),
       },
     },
-    (params) => ({
+    async (params) => ({
       description: "Weather payment for " + params.city,
       satoshi: 21,
     }),
