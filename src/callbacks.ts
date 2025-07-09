@@ -6,7 +6,7 @@ import { IStorage } from "./storage/storage.js";
 
 export type ChargeCallback<InputArgs extends ZodRawShape> = (
   params: z.objectOutputType<InputArgs, ZodTypeAny>
-) => { satoshi: number; description: string };
+) => Promise<{ satoshi: number; description: string }>;
 
 export function paidCallback<InputArgs extends ZodRawShape>(
   cb: ToolCallback<InputArgs>,
