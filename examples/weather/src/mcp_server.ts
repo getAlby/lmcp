@@ -1,4 +1,4 @@
-import { PaidMcpServer } from "@getalby/lmcp";
+import { PaidMcpServer } from "@getalby/paidmcp";
 import { registerGetWeatherTool } from "./tools/get_weather.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 

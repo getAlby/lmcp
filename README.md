@@ -1,4 +1,4 @@
-# LMCP - Charge Bitcoin For MCP Server Tools
+# PaidMCP - Charge Bitcoin For MCP Server Tools
 
 Receive lightning payments for each tool request, powered by [NWC](https://nwc.dev).
 
@@ -16,13 +16,13 @@ In a few lines of code, turn your [modelcontextprotocol/sdk](https://github.com/
 ### Install
 
 ```bash
-npm install @getalby/lmcp
+npm install @getalby/paidmcp
 ```
 
 or
 
 ```bash
-yarn add @getalby/lmcp
+yarn add @getalby/paidmcp
 ```
 
 ### Import and use `PaidMcpServer`
@@ -32,7 +32,7 @@ yarn add @getalby/lmcp
 > This MCP requires an NWC-enabled lightning wallet to be able to charge payments. [NWC](https://nwc.dev) is an open protocol for connecting apps to lightning wallets. If you don't have a NWC-enabled lightning wallet yet, try [Alby Hub](https://albyhub.com).
 
 ```js
-import { PaidMcpServer } from "@getalby/lmcp";
+import { PaidMcpServer } from "@getalby/paidmcp";
 
 // Configure your NWC URL - should be "nostr+walletconnect://..."
 const nwcUrl = process.env.NWC_URL;

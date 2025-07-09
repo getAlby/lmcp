@@ -30,7 +30,7 @@
   "author": "Alby contributors",
   "license": "Apache-2.0",
   "dependencies": {
-    "@getalby/lmcp": "portal:../../",
+    "@getalby/paidmcp": "portal:../../",
     "@modelcontextprotocol/sdk": "^1.13.0",
     "@types/node": "^20.11.5",
     "dotenv": "^16.4.7",

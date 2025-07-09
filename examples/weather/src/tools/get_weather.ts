@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PaidMcpServer } from "@getalby/lmcp";
+import { PaidMcpServer } from "@getalby/paidmcp";
 
 export function registerGetWeatherTool(server: PaidMcpServer) {
   server.registerPaidTool(

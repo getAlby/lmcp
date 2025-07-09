@@ -12,9 +12,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@getalby/lmcp@portal:../../::locator=%40getalby%2Fweather-mcp%40workspace%3A.":
+"@getalby/paidmcp@portal:../../::locator=%40getalby%2Fweather-mcp%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@getalby/lmcp@portal:../../::locator=%40getalby%2Fweather-mcp%40workspace%3A."
+  resolution: "@getalby/paidmcp@portal:../../::locator=%40getalby%2Fweather-mcp%40workspace%3A."
   dependencies:
     "@getalby/sdk": "npm:^5.1.0"
     "@modelcontextprotocol/sdk": "npm:^1.13.0"
@@ -37,7 +37,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@getalby/weather-mcp@workspace:."
   dependencies:
-    "@getalby/lmcp": "portal:../../"
+    "@getalby/paidmcp": "portal:../../"
     "@modelcontextprotocol/sdk": "npm:^1.13.0"
     "@types/express": "npm:^5.0.2"
     "@types/node": "npm:^20.11.5"

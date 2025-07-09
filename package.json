@@ -1,7 +1,7 @@
 {
-  "name": "@getalby/lmcp",
+  "name": "@getalby/paidmcp",
   "description": "Charge for your MCP Server tools using Nostr Wallet Connect",
-  "repository": "https://github.com/getAlby/lmcp.git",
+  "repository": "https://github.com/getAlby/paidmcp.git",
   "version": "1.0.0",
   "type": "module",
   "main": "build/index.js",
