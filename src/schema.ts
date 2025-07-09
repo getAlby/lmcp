@@ -30,6 +30,13 @@ export function paidConfig<
     outputSchema?: ZodRawShape;
   }
 >(config: T) {
+  const optionalOutputSchema: ZodRawShape = {};
+  if (config.outputSchema) {
+    for (const entry of Object.entries(config.outputSchema)) {
+      optionalOutputSchema[entry[0]] = entry[1].optional();
+    }
+  }
+
   return {
     ...config,
     inputSchema: {
@@ -37,7 +44,7 @@ export function paidConfig<
       ...paidInputSchema,
     },
     outputSchema: {
-      ...(config.outputSchema || {}),
+      ...optionalOutputSchema,
       ...paidOutputSchema,
     },
   };

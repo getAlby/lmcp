@@ -13,7 +13,6 @@ export function registerGetWeatherTool(server: PaidMcpServer) {
       outputSchema: {
         temperature_celcius: z
           .number()
-          .optional()
           .describe("The temperature in degrees celcius"),
       },
     },
