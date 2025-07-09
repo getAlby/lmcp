@@ -1,11 +1,11 @@
 import { ToolCallback } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import { z, ZodRawShape } from "zod";
+import { z, ZodRawShape, ZodTypeAny } from "zod";
 import { IWallet } from "./wallets/wallet.js";
 import { IStorage } from "./storage/storage.js";
 
 export type ChargeCallback<InputArgs extends ZodRawShape> = (
-  params: InputArgs
+  params: z.objectOutputType<InputArgs, ZodTypeAny>
 ) => { satoshi: number; description: string };
 
 export function paidCallback<InputArgs extends ZodRawShape>(
