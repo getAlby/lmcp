@@ -1,6 +1,6 @@
 {
   "name": "@getalby/weather-mcp",
-  "description": "MCP server for controlling a Lightning wallet using Nostr Wallet Connect",
+  "description": "MCP server for fetching weather paid using a lightning wallet",
   "repository": "https://github.com/getAlby/mcp.git",
   "version": "1.1.0",
   "type": "module",
