@@ -52,7 +52,8 @@ server.registerPaidTool(
 
 ## Examples
 
-See [weather example](./examples/weather/README.md)
+- [Weather example](./examples/weather/README.md) - simple example of a paid `get_weather` tool
+- [PaidMCP Boilerplate](https://github.com/getAlby/paidmcp-boilerplate) - full boilerplate repository to get you started straight away with free and paid tools
 
 ## How it works
 
