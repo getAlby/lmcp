@@ -11,6 +11,10 @@ In a few lines of code, turn your [modelcontextprotocol/sdk](https://github.com/
 + server.registerPaidTool(name, config, charge, callback);
 ```
 
+## Why use PaidMCP
+
+Instead of using the [Cloudflare Stripe MCP Boilerplate](https://github.com/iannuttall/mcp-boilerplate) which is difficult to setup, high fees and chargeback risks, you can accept payments easily and instantly from anyone in the world, without fees. This is made possible by the bitcoin lightning network.
+
 ## Get started
 
 ### Install
