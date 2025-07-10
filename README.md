@@ -6,7 +6,7 @@ In a few lines of code, turn your [modelcontextprotocol/sdk](https://github.com/
 
 ```diff
 - const server = new McpServer({name: "your-mcp-server"});
-+ const server = new PaidMcpServer({name: "your mcp server"}, {nwcUrl});
++ const server = new PaidMcpServer({name: "your mcp server"}, {nwcUrl, storage});
 - server.registerTool(name, config, callback);
 + server.registerPaidTool(name, config, charge, callback);
 ```
@@ -36,12 +36,17 @@ yarn add @getalby/paidmcp
 > This MCP requires an NWC-enabled lightning wallet to be able to charge payments. [NWC](https://nwc.dev) is an open protocol for connecting apps to lightning wallets. If you don't have a NWC-enabled lightning wallet yet, try [Alby Hub](https://albyhub.com).
 
 ```js
-import { PaidMcpServer } from "@getalby/paidmcp";
+import { PaidMcpServer, MemoryStorage } from "@getalby/paidmcp";
 
 // Configure your NWC URL - should be "nostr+walletconnect://..."
 const nwcUrl = process.env.NWC_URL;
+// Configure storage of unused paid tool requests
+const storage = new MemoryStorage();
 // use PaidMcpServer instead of McpServer
-const server = new PaidMcpServer({ name: "your-mcp-server" }, { nwcUrl });
+const server = new PaidMcpServer(
+  { name: "your-mcp-server" },
+  { nwcUrl, storage }
+);
 
 // for paid tools, use registerPaidTool
 // it requires an additional argument before the callback
