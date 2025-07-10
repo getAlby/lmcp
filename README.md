@@ -17,6 +17,17 @@ Instead of using the [Cloudflare Stripe MCP Boilerplate](https://github.com/iann
 
 ## Get started
 
+### Try an example Paid MCP
+
+If your agent supports remote MCP servers - HTTP Streamable transports or SSE (e.g. N8N), you can connect to Alby's MCP server:
+
+- HTTP Streamable: `https://weather-mcp.fly.dev/mcp`
+- SSE (Deprecated): `https://weather-mcp.fly.dev/sse`
+
+Then ask: "What's the weather in Berlin?"
+
+> Make sure to also install [Alby MCP](https://github.com/getalby/mcp) to allow your agent to make the payment.
+
 ### Install
 
 ```bash
